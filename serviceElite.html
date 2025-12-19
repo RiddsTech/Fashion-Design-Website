@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Page of Elite Fashion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --font-color1: rgb(104, 1, 1);
+            --font-color2: #fff;
+            --font-family: 'Consolas';
+            --font-family2: 'Calibri';
+            --color: #f0f0f0bb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 100%;
+            height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--font-family);
+        }
+
+        .logo {
+            width: 50%;
+            text-align: left;
+        }
+
+        #logo-text {
+            font-size: 30px;
+            color: #000;
+            cursor: pointer;
+            width: 33%;
+        }
+
+        #part {
+            color: var(--font-color1);
+            font-size: 25px;
+        }
+
+        .menu {
+            width: 50%;
+            background: var(--font-color2);
+            padding: 15px 20px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0px 8px 16px 0px #bbbb;
+        }
+
+        .navig {
+            text-decoration: none;
+            color: var(--font-color1);
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 50px;
+            cursor: pointer;
+            transition: .8s ease;
+        }
+
+        #active {
+            text-decoration: underline;
+            color: var(--font-color1);
+            text-underline-offset: 5px;
+        }
+
+        .navig:hover,
+        #active:hover {
+            color: #000;
+            transition: .8s ease-in-out;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        .order {
+            background: var(--color);
+            padding: 60px 50px 50px 50px;
+            height: 650px;
+        }
+
+        .order-text {
+            margin-top: 60px;
+            width: 50%;
+        }
+
+        .intro-face {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #small-horder {
+            font-size: 80px;
+            font-family: var(--font-family);
+            color: var(--font-color1);
+        }
+
+        #big-horder {
+            font-size: 100px;
+            font-family: var(--font-family);
+            margin-top: -10px;
+        }
+
+        #qorder {
+            font-size: 20px;
+            font-family: var(--font-family2);
+        }
+
+        #btn2 {
+            font-family: var(--font-family2);
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: .5s ease;
+            border: 1px solid var(--font-color1);
+        }
+
+        #btn2:hover {
+            color: var(--font-color2);
+            background: var(--font-color1);
+            transition: .5s ease-in-out;
+        }
+
+        .intro-picture {
+            width: 50%;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #intro-pic1 {
+            width: 300px;
+            border-radius: 20px;
+            border: 7px solid var(--font-color2);
+            box-shadow: 0 8px 16px 0 #bbbb;
+        }
+
+        #intro-pic2 {
+            width: 200px;
+            border-radius: 20px;
+            border: 7px solid var(--font-color2);
+            box-shadow: 0 8px 16px 0 #bbbb;
+            margin-top: 120px;
+            margin-right: -80px;
+            z-index: 1;
+        }
+
+        .material {
+            background-image: url(images/mater4.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 700px;
+        }
+
+        .mater-cover {
+            background: rgba(104, 1, 1, 0.8);
+            padding: 40px;
+            height: 100%;
+        }
+
+        .talk-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+            font-family: var(--font-family);
+        }
+
+        #line1 {
+            border: 2px solid gold;
+            width: 30px;
+            margin-right: 20px;
+        }
+
+        #talk-head {
+            font-size: 40px;
+            width: 95%;
+            color: gold;
+        }
+
+        .small-text {
+            width: 50%;
+            text-align: justify;
+            margin-top: 15px;
+        }
+
+        #tmater {
+            font-family: var(--font-family2);
+            font-size: 20px;
+            color: var(--font-color2);
+        }
+
+        .mater-pic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        #mat {
+            width: 19%;
+            height: 270px;
+            margin: 3px;
+            box-shadow: 4px 8px 16px 4px #000;
+            filter: brightness(70%);
+            cursor: pointer;
+            transition: .5s ease;
+            border-radius: 15px;
+        }
+
+        #mat:hover {
+            filter: brightness(100%);
+            transition: .5s ease-in-out;
+            transform: scale(1.05);
+        }
+
+        #mat7 {
+            width: 23%;
+            height: 300px;
+            margin: 3px;
+            box-shadow: 4px 8px 16px 4px #000;
+            filter: brightness(70%);
+            cursor: pointer;
+            transition: .5s ease;
+            border-radius: 15px;
+            z-index: 1;
+        }
+
+        #mat7:hover {
+            filter: brightness(100%);
+            transition: .5s ease-in-out;
+            transform: scale(1.05);
+        }
+
+        .btn3 {
+            margin-top: 20px;
+            background: #000;
+            padding: 10px 25px;
+            font-size: 18px;
+            color: var(--font-color2);
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn4 {
+            margin: 40px 0;
+            text-align: center;
+        }
+
+        #btn4 {
+            font-family: var(--font-family);
+            color: gold;
+            font-size: 18px;
+            transition: 1s ease;
+            text-underline-offset: 5px;
+        }
+
+        #btn4:hover {
+            transition: 1s ease-in-out;
+            color: var(--font-color2);
+        }
+
+        .collect {
+            padding: 40px 30px;
+        }
+
+        .head-collect {
+            text-align: center;
+        }
+
+        #hcollect {
+            font-family: var(--font-family2);
+            font-size: 70px;
+            color: var(--font-color1);
+        }
+
+        #scollect {
+            font-size: 20px;
+            font-family: var(--font-family);
+        }
+
+        .collect-back {
+            margin-top: 30px;
+            background: var(--color);
+            padding: 10px 20px;
+        }
+
+        .collect-block {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 310px;
+        }
+
+        .collect-pack {
+            height: 300px;
+            width: 80%;
+        }
+
+        .title-block {
+            background: var(--font-color1);
+            height: 310px;
+            width: 20%;
+            margin-right: 10px;
+            margin-top: 10px;
+            text-align: center;
+            border-bottom: 5px solid gold;
+        }
+
+        #title-name {
+            font-family: var(--font-family2);
+            color: var(--font-color2);
+            font-size: 20px;
+            margin-top: 120px;
+        }
+
+        .image-block,
+        .image-block2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image-block2 {
+            margin-top: 5px;
+        }
+
+        .imgs {
+            width: 20%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        #male-img1 {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .btn5 {
+            margin-top: 20px;
+        }
+
+        #btn5 {
+            text-decoration: none;
+            color: var(--font-color2);
+            background: var(--font-color1);
+            padding: 10px 20px;
+            font-family: var(--font-family2);
+            transition: .5s ease;
+            border: 1px solid var(--font-color1);
+        }
+
+        #btn5:hover {
+            transition: .5s ease-in-out;
+            background: transparent;
+            border: 1px solid #000;
+            color: #000;
+        }
+
+        .apply {
+            background-image: url(images/cloth\ cover.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 500px;
+            padding: 40px;
+        }
+
+        .apply-head {
+            text-align: center;
+        }
+
+        #main-head {
+            font-family: var(--font-family);
+            color: var(--font-color1);
+            font-size: 40px;
+        }
+
+        #sub-head {
+            font-family: var(--font-family);
+            font-size: 18px;
+            color: #000;
+            width: 70%;
+            margin: auto;
+        }
+
+        #btn6 {
+            margin-top: 30px;
+            background: var(--font-color1);
+            font-size: 16px;
+            font-family: var(--font-family2);
+            color: var(--font-color2);
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: .5s ease;
+        }
+
+        #btn6:hover {
+            transition: .5s ease-in-out;
+            background: #000;
+        }
+
+        .foot {
+            background: #000;
+            height: 90px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .sos {
+            margin: auto;
+            text-align: center;
+            cursor: pointer;
+            color: var(--font-color2);
+            transition: .5s ease;
+        }
+
+        #sos-text {
+            font-family: var(--font-family);
+            font-size: 18px;
+        }
+
+        #icon1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .sos:hover {
+            color: gold;
+            transition: .5s ease-in-out;
+        }
+
+        .arrow-cover {
+            position: absolute;
+            right: 30px;
+            margin-top: -180px;
+        }
+
+        .auto-move {
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #icon-auto {
+            font-size: 30px;
+            color: #000;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .logo {
+                width: 40%;
+            }
+
+            .menu {
+                width: 60%;
+            }
+
+            .navig {
+                margin: 0 30px;
+            }
+
+            .small-text {
+                width: 65%;
+            }
+
+        }
+
+        @media screen and (max-width: 960px) {
+            .logo {
+                width: 35%;
+            }
+
+            .menu {
+                width: 65%;
+            }
+
+            .navig {
+                margin: 0 30px;
+            }
+
+            #intro-pic1 {
+                width: 250px;
+            }
+
+            #intro-pic2 {
+                width: 150px;
+            }
+
+            #mat {
+                height: 220px;
+            }
+
+            #mat7 {
+                height: 250px;
+            }
+        }
+
+        @media screen and (max-width: 810px) {
+            .navig {
+                margin: 0 20px;
+            }
+
+            .order {
+                padding: 40px 30px 30px 30px;
+            }
+
+            #small-horder {
+                font-size: 60px;
+            }
+
+            #big-horder {
+                font-size: 80px;
+            }
+
+            #sub-head {
+                width: 90%;
+            }
+        }
+
+        @media screen and (max-width: 740px) {
+            nav {
+                display: block;
+            }
+
+            .order {
+                height: 1000px;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            #logo-text {
+                width: 100%;
+            }
+
+            .menu {
+                width: 100%;
+            }
+
+            .navig {
+                margin: 0 40px;
+            }
+
+            .intro-face {
+                display: block;
+            }
+
+            .order-text {
+                width: 100%;
+            }
+
+            #small-horder {
+                font-size: 80px;
+            }
+
+            #big-horder {
+                font-size: 100px;
+            }
+
+            #intro-pic1 {
+                width: 300px;
+            }
+
+            #intro-pic2 {
+                width: 200px;
+            }
+
+            .intro-picture {
+                width: 100%;
+            }
+
+            /* MATERIAL */
+            .material {
+                height: 1100px;
+            }
+
+            .small-text {
+                width: 100%;
+            }
+
+            .mater-pic {
+                flex-wrap: wrap;
+                align-content: space-around;
+                width: 100%;
+            }
+
+            #mat {
+                width: 200px;
+            }
+
+            #mat7 {
+                width: 200px;
+                height: 220px;
+            }
+
+            /* COLLECT */
+            .collect-block {
+                display: block;
+                height: 350px;
+            }
+
+            .title-block {
+                width: 100%;
+                height: 50px;
+                padding: 10px;
+            }
+
+            #title-name {
+                margin-top: 0;
+            }
+
+            .collect-pack {
+                width: 100%;
+            }
+
+            .btn5 {
+                text-align: center;
+            }
+
+            #sub-head {
+                width: 100%;
+                font-size: 16px;
+            }
+
+            .foot {
+                margin-top: 10px;
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            .material {
+                height: 1200px;
+            }
+        }
+
+        @media screen and (max-width: 560px) {
+            .navig {
+                margin: 0 20px;
+            }
+
+            #small-horder {
+                font-size: 60px;
+            }
+
+            #big-horder {
+                font-size: 80px;
+            }
+
+            #intro-pic1 {
+                width: 250px;
+            }
+
+            #intro-pic2 {
+                width: 150px;
+            }
+
+            #talk-head {
+                font-size: 30px;
+            }
+
+            /* MATERIAL */
+            .material {
+                height: 1400px;
+            }
+
+            .mater-pic {
+                gap: 10px;
+            }
+
+            /* COLLECTION */
+            .collect-block {
+                height: 1900px;
+            }
+
+            .image-block {
+                display: block;
+            }
+
+            .imgs {
+                width: 70%;
+                height: 360px;
+                margin: auto;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            #qorder {
+                font-size: 18px;
+            }
+
+            .material {
+                height: 1700px;
+            }
+
+            #hcollect {
+                font-size: 50px;
+            }
+
+            #scollect {
+                font-size: 18px;
+            }
+
+            #sos-text {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 440px) {
+            .navig {
+                margin: 0 5px;
+            }
+
+            #big-horder {
+                font-size: 70px;
+            }
+
+            .mater-cover {
+                padding: 20px;
+            }
+
+            .collect {
+                padding: 40px 10px;
+            }
+
+            .imgs {
+                height: 250px;
+            }
+
+            .collect-block {
+                height: 1350px;
+            }
+
+            .apply {
+                padding: 20px;
+            }
+
+            #main-head {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 350px) {
+            .navig {
+                font-size: 16px;
+            }
+
+            .order {
+                padding: 30px 20px 20px 20px;
+            }
+
+            #intro-pic1 {
+                width: 230px;
+            }
+
+            #intro-pic2 {
+                width: 130px;
+            }
+
+            .material {
+                height: 1800px;
+            }
+
+            .foot {
+                display: block;
+                height: 300px;
+                padding: 20px;
+            }
+
+            .sos {
+                margin-bottom: 15px;
+            }
+
+            #icon1 {
+                margin-bottom: 5px;
+            }
+
+            .auto-move{
+                background: var(--font-color2);
+                border: none;
+                width: 40px;
+                height: 40px;
+            }
+
+            #icon-auto{
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="order" id="start">
+            <nav>
+                <div class="logo">
+                    <h3 id="logo-text">EliTe<span id="part">fashion</span></h3>
+                </div>
+
+                <div class="menu">
+                    <a href="aboutElite.html" class="navig">About</a>
+                    <a href="serviceElite.html" class="navig" id="active">Services</a>
+                    <a href="contactElite.html" class="navig">Contact</a>
+                </div>
+            </nav>
+
+            <div class="intro-face">
+                <div class="order-text">
+                    <h3 id="small-horder">ORDER A</h3>
+                    <h1 id="big-horder">SERVICE</h1>
+                    <p id="qorder">Get premium service and attention from our team for a
+                        suitable dress for your desired occassion.
+                    </p>
+                    <a href="contactElite.html">
+                        <input type="button" name="btn2" id="btn2" value="Order Service">
+                    </a>
+                </div>
+
+                <div class="intro-picture">
+                    <img src="images/new women1.jpeg" alt="women-cloth" id="intro-pic2">
+                    <img src="images/new men2.jpg" alt="men-cloth" id="intro-pic1">
+                </div>
+            </div>
+        </div>
+
+        <!-- MATERIAL DESIGN -->
+        <div class="material">
+            <div class="mater-cover">
+                <div class="head-mater">
+                    <div class="talk-header">
+                        <hr id="line1">
+                        <h2 id="talk-head">Sales of Material Designs</h2>
+                    </div>
+
+                    <div class="small-text">
+                        <p id="tmater">
+                            We also sell clothing materials of all kinds such as silk, polyester, wool,
+                            linen, cotton, leather, chiffon, crepe, ankara, lace & many more.
+                            You can purchase a suitable material for your purpose from us and get
+                            a fashionable design to flow with the fashion world. Help us increase your
+                            taste in fashion today!
+                        </p>
+
+                        <a href="#">
+                            <button type="submit" class="btn3">Buy one</button>
+                        </a>
+                    </div>
+
+                    <div class="mater-pic">
+                        <img src="images/mater2.jpeg" alt="materials" id="mat">
+                        <img src="images/mater3.jpg" alt="materials" id="mat">
+                        <img src="images/mater7.jpeg" alt="materials" id="mat7">
+                        <img src="images/mater5.jpeg" alt="materials" id="mat">
+                        <img src="images/mater9.jpeg" alt="materials" id="mat">
+                    </div>
+
+                    <div class="btn4">
+                        <a href="#" id="btn4">View More </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- CLOTHING COLLECTION -->
+        <div class="collect" id="collection">
+            <div class="head-collect">
+                <h2 id="hcollect">Clothing Collection</h2>
+                <h5 id="scollect">Clothing styles for all purpose, genders, ages and occassions.<br>
+                    Select a suitable design of your choice.</h5>
+            </div>
+
+            <div class="collection">
+                <div class="collect-back">
+
+                    <div class="collect-block" id="men-wear">
+                        <div class="title-block">
+                            <h3 id="title-name">Men Wears</h3>
+                        </div>
+
+                        <div class="collect-pack">
+                            <div class="image-block">
+                                <div class="imgs"><img src="images/m wears1.png" alt="male wears" id="male-img1"></div>
+                                <div class="imgs"><img src="images/m wears2.jpg" alt="male wears" id="male-img1"></div>
+                                <div class="imgs"><img src="images/m wears3.jpg" alt="male wears" id="male-img1"></div>
+                                <div class="imgs"><img src="images/ankara4.jpg" alt="male wears" id="male-img1"></div>
+                                <div class="imgs"><img src="images/m wears5.jpg" alt="male wears" id="male-img1"></div>
+                            </div>
+                            <div class="btn5">
+                                <a href="#" id="btn5">See More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collect-block" id="women-wear">
+                        <div class="title-block">
+                            <h3 id="title-name">Women Wears</h3>
+                        </div>
+
+                        <div class="collect-pack">
+                            <div class="image-block">
+                                <div class="imgs"><img src="images/w wears1.jpeg" alt="female wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/w wears2.png" alt="female wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/w wears 3.jpg" alt="female wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/w wears4.jpg" alt="female wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/w wears5.jpg" alt="female wears" id="male-img1">
+                                </div>
+                            </div>
+                            <div class="btn5">
+                                <a href="#" id="btn5">See More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collect-block" id="children-wear">
+                        <div class="title-block">
+                            <h3 id="title-name">Children Wears</h3>
+                        </div>
+
+                        <div class="collect-pack">
+                            <div class="image-block">
+                                <div class="imgs"><img src="images/c wears1.jpg" alt="children wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/c wears2.jpg" alt="children wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/c wear7.jpg" alt="children wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/c wears5.jpg" alt="children wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/c wears4.jpg" alt="children wears" id="male-img1">
+                                </div>
+                            </div>
+                            <div class="btn5">
+                                <a href="#" id="btn5">See More</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="collect-block" id="traditional-outfits">
+                        <div class="title-block">
+                            <h3 id="title-name">Ankara Wears</h3>
+                        </div>
+
+                        <div class="collect-pack">
+                            <div class="image-block">
+                                <div class="imgs"><img src="images/ankara1.jpg" alt="traditional wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/ankara2.jpg" alt="traditional wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/ankara3.jpg" alt="traditional wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/ankara5.jpg" alt="traditional wears" id="male-img1">
+                                </div>
+                                <div class="imgs"><img src="images/m wears4.jpg" alt="traditional wears" id="male-img1">
+                                </div>
+                            </div>
+                            <div class="btn5">
+                                <a href="#" id="btn5">See More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- APPLY APPRENTICE -->
+        <div class="apply">
+            <div class="apply-head">
+                <h1 id="main-head">APPLY FOR APPRENTICESHIP</h1>
+                <p id="sub-head">If you are interested in the fashion world, you can apply for our
+                    apprentice program where you can get into the fashion design and learn how to
+                    become a professional stylist with our training program.
+                </p>
+                <a href="#">
+                    <input type="submit" name="btn6" id="btn6" value="Apply to Learn">
+                </a>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="foot">
+            <div class="sos">
+                <i class="fa-brands fa-facebook" id="icon1"></i>
+                <h3 id="sos-text">Facebook</h3>
+            </div>
+
+            <div class="sos">
+                <i class="fa-brands fa-instagram" id="icon1"></i>
+                <h3 id="sos-text">Instagram</h3>
+            </div>
+
+            <div class="sos">
+                <i class="fa-brands fa-tiktok" id="icon1"></i>
+                <h3 id="sos-text">Tiktok</h3>
+            </div>
+
+            <div class="sos">
+                <i class="fa-brands fa-whatsapp" id="icon1"></i>
+                <h3 id="sos-text">Whatsapp</h3>
+            </div>
+        </div>
+
+        <div class="arrow-cover">
+                <a href="#start" class="auto-move">
+                    <i class="fa-solid fa-arrow-up" id="icon-auto"></i>
+                </a>
+            </div>
+    </section>
+
+</body>
+
+</html>

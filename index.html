@@ -1,0 +1,1250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page of Elite Fashion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --font-color1: rgb(104, 1, 1);
+            --font-color2: #fff;
+            --font-family: 'Consolas';
+            --font-family2: 'Calibri';
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 100%;
+        }
+
+        .front {
+            background-image: url(images/front.jpeg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 50px;
+        }
+
+        .sub-front {
+            padding: 20px 40px;
+            background: rgba(0, 0, 0, 0.281);
+            border: 1px solid #bbbb;
+            font-family: var(--font-family);
+            height: 600px;
+            border-radius: 30px;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 50%;
+            text-align: left;
+        }
+
+        #logo-text {
+            font-size: 30px;
+            color: var(--font-color2);
+            cursor: pointer;
+        }
+
+        #part {
+            color: var(--font-color1);
+            font-size: 25px;
+        }
+
+        .menu {
+            width: 50%;
+            background: var(--font-color2);
+            padding: 15px 20px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .navig {
+            text-decoration: none;
+            color: var(--font-color1);
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 50px;
+            cursor: pointer;
+            transition: .8s ease;
+        }
+
+        #active {
+            text-decoration: underline;
+            color: var(--font-color1);
+            text-underline-offset: 5px;
+        }
+
+        .navig:hover,
+        #active:hover {
+            color: #000;
+            transition: .8s ease-in-out;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        .display {
+            margin: 50px 0;
+            padding-top: 30px;
+            text-align: center;
+        }
+
+        #top-text {
+            font-size: 70px;
+            color: var(--font-color2);
+        }
+
+        #main-text {
+            font-size: 100px;
+            color: var(--font-color2);
+        }
+
+        #part2 {
+            color: var(--font-color1);
+        }
+
+        #down-text {
+            font-size: 20px;
+            color: var(--font-color2);
+        }
+
+        .load {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle1 {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background: var(--font-color2);
+            margin: 20px 10px;
+            animation-name: loader;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transition: 1s ease;
+        }
+
+        .circle2 {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background: var(--font-color2);
+            margin: 20px 10px;
+            animation-name: loader;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            transition: 1s ease;
+        }
+
+        .circle3 {
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            background: var(--font-color2);
+            margin: 20px 10px;
+            animation-name: loader;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            transition: 1s ease;
+        }
+
+        @keyframes loader {
+            0% {
+                background: var(--font-color2);
+            }
+
+            100% {
+                background: var(--font-color1);
+            }
+        }
+
+        .welcome {
+            padding-top: 50px;
+            text-align: center;
+            width: 100%;
+        }
+
+        #ital {
+            font-family: 'Athletic Outfit';
+            font-size: 40px;
+        }
+
+        #intro-text {
+            margin-top: -10px;
+            font-size: 100px;
+            font-family: var(--font-family);
+            color: var(--font-color1);
+        }
+
+        #part-text {
+            color: #000;
+            font-size: 70px;
+        }
+
+        .view {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        #img1 {
+            width: 250px;
+            margin: 20px 25px 10px 25px;
+            cursor: pointer;
+            transition: .5s ease;
+        }
+
+        #img1:hover {
+            transition: .5s ease-in-out;
+            filter: brightness(50%);
+        }
+
+        .btn1 {
+            margin: 40px 0;
+        }
+
+        #btn1 {
+            text-decoration: none;
+            font-family: var(--font-family);
+            color: var(--font-color1);
+            font-size: 18px;
+            transition: 1s ease;
+        }
+
+        #btn1:hover {
+            transition: 1s ease-in-out;
+            color: #000;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        #img-link {
+            text-decoration: none;
+            color: #000;
+        }
+
+        #view-text {
+            font-family: var(--font-family2);
+            font-size: 20px;
+        }
+
+        .talk {
+            width: 100%;
+            background: #f0f0f0bb;
+            padding: 40px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #img2 {
+            margin: 0 0 0 -80px;
+            width: 600px;
+            height: 400px;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-top: 7px solid var(--font-color2);
+            border-bottom: 7px solid var(--font-color2);
+            border-right: 7px solid var(--font-color2);
+            box-shadow: 0 4px 16px 0 black;
+        }
+
+        .talk-text {
+            text-align: left;
+            width: 50%;
+            font-family: var(--font-family2);
+            padding: 50px;
+            margin-left: 30px;
+        }
+
+        .talk-header {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+        }
+
+        #talk-head {
+            font-size: 40px;
+            color: var(--font-color1);
+            width: 90%;
+        }
+
+        #line1 {
+            border: 1px solid var(--font-color1);
+            width: 30px;
+            margin-right: 20px;
+        }
+
+        #t-talk {
+            font-size: 20px;
+            text-align: justify;
+            line-height: 30px;
+        }
+
+        .sync {
+            margin-bottom: 40px;
+        }
+
+        #shead {
+            font-size: 50px;
+            font-family: var(--font-family);
+            margin: 30px 0 0 0;
+            color: var(--font-color1);
+        }
+
+        #stext {
+            margin: 10px 0 20px 0;
+            font-size: 18px;
+            font-family: var(--font-family2);
+        }
+
+        .ditch {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            align-content: space-between;
+            width: 100%;
+        }
+
+        .icons {
+            width: 33%;
+            text-align: center;
+        }
+
+        #icon1 {
+            font-size: 150px;
+            color: #000;
+            margin: 20px 0;
+        }
+
+        #text-icon {
+            font-family: var(--font-family);
+            font-size: 20px;
+            color: var(--font-color1);
+        }
+
+        .styles {
+            height: 880px;
+            padding-top: 30px;
+            background: var(--font-color1);
+        }
+
+        .style-head {
+            text-align: center;
+        }
+
+        #big-head {
+            font-family: var(--font-family);
+            font-size: 50px;
+            color: var(--font-color2);
+        }
+
+        #small-head {
+            font-size: 20px;
+            color: var(--font-color2);
+            font-family: var(--font-family2);
+            font-weight: normal;
+            margin: 20px 0 -20px 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        .cloth-pic1,
+        .cloth-pic2,
+        .cloth-pic3,
+        .cloth-pic4,
+        .cloth-pic5,
+        .cloth-pic6,
+        .cloth-pic7,
+        .cloth-pic8,
+        .cloth-pic9 {
+            width: 200px;
+            cursor: pointer;
+            border-radius: 20px;
+            transition: .7s ease;
+        }
+
+        .cloth-pic1:hover,
+        .cloth-pic2:hover,
+        .cloth-pic3:hover,
+        .cloth-pic4:hover,
+        .cloth-pic5:hover,
+        .cloth-pic6:hover,
+        .cloth-pic7:hover,
+        .cloth-pic8:hover,
+        .cloth-pic9:hover {
+            transition: .7s ease-in-out;
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px 0 #bbbb;
+        }
+
+        .cloth-pic1,
+        .cloth-pic2 {
+            margin: 20px;
+        }
+
+        .cloth-pic4 {
+            width: 600px;
+        }
+
+        .cloth-img2,
+        .cloth-img3 {
+            display: grid;
+            place-content: center;
+        }
+
+        .cloth-img4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            align-content: space-between;
+            gap: 10px;
+        }
+
+        .cloth-half {
+            width: 200px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .cloth-pic3,
+        .cloth-pic5,
+        .cloth-pic6 {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 20px;
+        }
+
+        .cloth-pic3,
+        .cloth-pic4,
+        .cloth-pic5,
+        .cloth-pic6 {
+            margin: 10px;
+        }
+
+        .cloth-cut {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+
+        .cloth-pic7,
+        .cloth-pic8,
+        .cloth-pic9 {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            margin: 20px;
+        }
+
+        #tdown {
+            font-family: var(--font-family);
+            font-size: 14px;
+            color: var(--font-color2);
+            margin-top: -30px;
+            text-align: center;
+        }
+
+        .customer {
+            padding: 50px 50px 30px 50px;
+        }
+
+        .cus-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f0f0f0bb;
+            padding: 20px;
+            border-radius: 30px;
+        }
+
+        .write-up {
+            width: 50%;
+        }
+
+        .testimony {
+            width: 50%;
+        }
+
+        #hwrite {
+            font-family: var(--font-family2);
+            font-size: 50px;
+            color: var(--font-color1);
+        }
+
+        #twrite {
+            font-family: var(--font-family2);
+            font-size: 20px;
+        }
+
+        #btn2 {
+            font-size: 18px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: .5s ease;
+            border: 1px solid var(--font-color1);
+        }
+
+        #btn2:hover {
+            color: var(--font-color2);
+            background: var(--font-color1);
+            transition: .5s ease-in-out;
+        }
+
+        .remark {
+            background: var(--font-color2);
+            padding: 20px;
+            width: 80%;
+            margin: 20px 40px;
+        }
+
+        #line2 {
+            border: 1px solid var(--font-color1);
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        #hremark {
+            font-size: 20px;
+            font-family: var(--font-family);
+            color: var(--font-color1);
+            width: 95%;
+        }
+
+        #tremark {
+            font-size: 18px;
+            font-family: var(--font-family2);
+        }
+
+        .base {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        #foot {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .star-rating {
+            display: flex;
+            font-size: 2em;
+            color: gold;
+        }
+
+        .star {
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+
+        .star.selected {
+            color: gold;
+        }
+
+        #unselect {
+            color: #dbdbdb;
+        }
+
+        .arrow-cover {
+            position: absolute;
+            right: 30px;
+            margin-top: -40px;
+        }
+
+        .auto-move {
+            text-decoration: none;
+            width: 50px;
+            height: 50px;
+            border: 2px solid #000;
+            border-radius: 50%;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        #icon-auto {
+            font-size: 30px;
+            color: #000;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .navig {
+                margin: 0 20px;
+            }
+
+            .styles {
+                height: 1100px;
+            }
+
+            .cloth-img5 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+                align-content: space-between;
+            }
+
+            .talk-text {
+                padding: 20px;
+            }
+
+        }
+
+        @media screen and (max-width: 960px) {
+            .front {
+                padding: 30px;
+            }
+
+            .logo {
+                width: 33%;
+            }
+
+            .menu {
+                width: 67%;
+            }
+
+            #top-text {
+                font-size: 50px;
+            }
+
+            #main-text {
+                font-size: 80px;
+            }
+
+            .talk {
+                display: block;
+            }
+
+            #img2 {
+                margin: 0 0 0 -300px;
+            }
+
+            .talk-text {
+                margin-top: 20px;
+                width: 90%;
+            }
+
+            .cloth-img2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .styles {
+                height: 1400px;
+            }
+
+        }
+
+        @media screen and (max-width: 720px) {
+            nav {
+                display: block;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .menu {
+                margin: auto;
+                width: 90%
+            }
+
+            /* Front */
+            #down-text {
+                margin-top: 10px;
+            }
+
+            #img2 {
+                margin: 0 0 0 -200px;
+            }
+
+            /* Offers */
+
+            .sync {
+                padding: 20px;
+                margin-bottom: 10px;
+            }
+
+            .ditch {
+                display: block;
+            }
+
+            .icons {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            /* Elegant Styles */
+            .styles {
+                height: 1300px;
+            }
+
+            #small-head {
+                font-size: 18px;
+            }
+
+            .container {
+                margin: 30px;
+            }
+
+            .cloth-pic4 {
+                width: 500px;
+                margin: auto;
+            }
+
+            .cloth-half {
+                width: 165px;
+                height: 220px;
+            }
+
+            .cloth-cut {
+                width: 170px;
+                height: 200px;
+            }
+
+            .cloth-img5 {
+                margin: auto;
+            }
+
+            .cloth-pic7,
+            .cloth-pic8,
+            .cloth-pic9 {
+                margin: 10px;
+            }
+
+            .style-down {
+                margin-top: 60px;
+            }
+
+            /* Customer */
+            .cus-group {
+                display: block;
+            }
+
+            .write-up {
+                width: 100%;
+            }
+
+            .testimony {
+                width: 100%;
+            }
+
+            .remark {
+                margin-right: 0;
+                margin-left: 0;
+            }
+        }
+
+        @media screen and (max-width: 560px) {
+            .menu {
+                width: 100%
+            }
+
+            .navig {
+                margin: 0 10px;
+                font-size: 15px;
+            }
+
+            .sub-front {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            #main-text {
+                font-size: 60px;
+            }
+
+            /* Welcome */
+            #intro-text {
+                font-size: 70px;
+            }
+
+            #part-text {
+                font-size: 50px;
+            }
+
+            /* Styles */
+            .styles {
+                height: 1550px;
+            }
+
+            .container {
+                margin: 20px 15px;
+            }
+
+            #small-head {
+                margin: 20px 10px -10px 10px;
+            }
+
+            .cloth-pic1,
+            .cloth-pic2 {
+                margin: 10px;
+                width: 150px;
+            }
+
+            .cloth-pic4 {
+                width: 350px;
+            }
+
+            .cloth-img4 {
+                gap: 0;
+            }
+
+            /* Customers */
+            .customer {
+                padding: 30px 30px 20px 30px;
+            }
+
+            .remark {
+                width: 100%;
+            }
+        }
+
+        @media screen and (max-width: 410px) {
+            #twrite {
+                font-size: 16px;
+            }
+
+            .front {
+                padding: 15px;
+            }
+
+            .navig {
+                margin: 0 4px;
+            }
+
+            #top-text {
+                font-size: 45px;
+            }
+
+            #main-text {
+                font-size: 55px;
+            }
+
+            /* Welcome */
+            #intro-text {
+                font-size: 60px;
+            }
+
+            #part-text {
+                font-size: 40px;
+            }
+
+            #img1 {
+                width: 220px;
+            }
+
+            #img2 {
+                width: 420px;
+                height: 250px;
+                margin: 0 0 0 -150px;
+                border-top: 5px solid var(--font-color2);
+                border-bottom: 5px solid var(--font-color2);
+                border-right: 5px solid var(--font-color2);
+            }
+
+            .talk-text {
+                width: 100%;
+                padding: 20px;
+                margin: 10px 10px 10px 0px;
+            }
+
+            #line1 {
+                width: 20px;
+            }
+
+            #talk-head {
+                font-size: 30px;
+            }
+
+            #t-talk {
+                font-size: 18px;
+            }
+
+            /* Styles */
+            .styles {
+                height: 1700px;
+            }
+
+            .cloth-pic4 {
+                width: 300px;
+            }
+
+            /* Customer */
+            .customer {
+                padding: 20px 20px 10px 20px;
+            }
+
+            #hwrite {
+                font-size: 40px;
+            }
+
+            #twrite {
+                font-size: 18px;
+            }
+
+            .arrow-cover {
+                right: 10px;
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            .styles {
+                height: 2000px;
+            }
+
+            .cloth-img2 {
+                gap: 10px;
+                margin-bottom: 10px;
+            }
+
+            .cloth-pic1,
+            .cloth-pic2 {
+                margin: 0;
+            }
+
+            .arrow-cover {
+                right: 10px;
+                margin-top: -30px;
+            }
+
+            .auto-move{
+                width: 35px;
+                height: 35px;
+            }
+
+            #icon-auto {
+                font-size: 20px;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .menu {
+                padding: 15px 10px;
+            }
+
+            .navig {
+                font-size: 16px;
+            }
+
+            #part2 {
+                font-size: 50px;
+            }
+
+            #intro-text {
+                font-size: 50px;
+            }
+
+            .cloth-img2 {
+                flex-wrap: wrap;
+                align-content: space-around;
+            }
+
+            .styles {
+                height: 2200px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <!-- First face -->
+        <div class="front" id="start">
+            <div class="sub-front">
+                <nav>
+                    <div class="logo">
+                        <h3 id="logo-text">EliTe<span id="part">fashion</span></h3>
+                    </div>
+
+                    <div class="menu">
+                        <a href="aboutElite.html" class="navig" id="active">About</a>
+                        <a href="serviceElite.html" class="navig">Services</a>
+                        <a href="contactElite.html" class="navig">Contact</a>
+                    </div>
+                </nav>
+
+                <div class="display">
+                    <h3 id="top-text">WE ARE</h3>
+                    <h1 id="main-text">Fashion <span id="part2">Designers</span></h1>
+                    <h5 id="down-text">Different clothing styles for all genders and occassions</h5>
+
+                    <div class="load">
+                        <div class="circle1"></div>
+                        <div class="circle2"></div>
+                        <div class="circle3"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Second Face -->
+        <div class="welcome">
+            <div class="heada">
+                <h3 id="ital">Welcome to</h3>
+                <h3 id="intro-text">EliTe<span id="part-text">fashion</span></h3>
+            </div>
+
+            <div class="view">
+                <a href="serviceElite.html#women-wear" id="img-link">
+                    <div class="image-view">
+                        <img src="images/cloth3.jpg" alt="cloth-image" id="img1">
+                        <p id="view-text">Female Clothes</p>
+                    </div>
+                </a>
+
+                <a href="serviceElite.html#men-wear" id="img-link">
+                    <div class="image-view">
+                        <img src="images/cloth4.jpg" alt="cloth-image" id="img1">
+                        <p id="view-text">Men Clothes</p>
+                    </div>
+                </a>
+
+                <a href="serviceElite.html#children-wear" id="img-link">
+                    <div class="image-view">
+                        <img src="images/cloth1.jpg" alt="cloth-image" id="img1">
+                        <p id="view-text">Children Clothes</p>
+                    </div>
+                </a>
+
+                <a href="serviceElite.html#traditional-outfits" id="img-link">
+                    <div class="image-view">
+                        <img src="images/OIP.jpg" alt="cloth-image" id="img1">
+                        <p id="view-text">Traditional Wears</p>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="btn1">
+                <a href="serviceElite.html#collection" id="btn1">View More </a>
+            </div>
+
+            <div class="talk">
+                <div class="img2">
+                    <img src="images/backup.jpeg" alt="clothing-image" id="img2">
+                </div>
+
+                <div class="talk-text">
+                    <div class="talk-header">
+                        <hr id="line1">
+                        <h2 id="talk-head">HOME OF ELEGANCE</h2>
+                    </div>
+
+                    <p id="t-talk">
+                        At Elite Fashion, we believe that true elegance is crafted from individuality.
+                        Our collections are a celebration of creativity and sophisticaton, designed for
+                        those who dare to stand out. Discover the perfect harmony of artistry and trend,
+                        where every piece tells a stroy and every outfit is an expression of your inner charisma.
+                        Elite Fashion is a place of clothing where we create incredible fashion designs
+                        that entise customers. Customers can choose or customize the kind of clothing fabric,
+                        design pattern and styling of their choice for their clothes. And we sew for all age
+                        and genders, children, teenagers and adults. Elevate your style, embrace your uniqueness,
+                        one extraordinary garment at a time.
+                    </p>
+                </div>
+            </div>
+
+            <div class="sync">
+                <h2 id="shead">Our Offers</h2>
+                <p id="stext">Our collection comes with true elegance crafted with individuality to elevate your style
+                    and your uniqueness.
+                </p>
+                <div class="ditch">
+                    <div class="icons">
+                        <i class="fa-solid fa-alarm-clock" id="icon1"></i>
+                        <h4 id="text-icon">24/7 Service</h4>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fa-solid fa-business-time" id="icon1"></i>
+                        <h4 id="text-icon">Premium Service</h4>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fa-solid fa-thumbs-up" id="icon1"></i>
+                        <h4 id="text-icon">Customer Satisfaction</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Third Face -->
+        <div class="styles">
+            <div class="style-head">
+                <h1 id="big-head">Elegant Styles</h1>
+                <h5 id="small-head">Gallery Preview for Male clothes, Female and Children Ankara styles...</h5>
+            </div>
+
+            <div class="container">
+                <div class="cloth-img2">
+                    <img src="images/child1.jpg" alt="child-cloth" class="cloth-pic1">
+                    <img src="images/child2.jpg" alt="child-cloth" class="cloth-pic2">
+                </div>
+
+                <div class="cloth-img3">
+                    <img src="images/women4.jpeg" alt="women-cloth" class="cloth-pic4">
+                    <div class="cloth-img4">
+                        <div class="cloth-half">
+                            <img src="images/child3.jpg" alt="child-cloth" class="cloth-pic3">
+                        </div>
+                        <div class="cloth-half">
+                            <img src="images/women2.jpg" alt="women-cloth" class="cloth-pic5">
+                        </div>
+                        <div class="cloth-half">
+                            <img src="images/women3.png" alt="women-cloth" class="cloth-pic6">
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="cloth-img5">
+                    <div class="cloth-cut">
+                        <img src="images/men1.webp" alt="men-cloth" class="cloth-pic7">
+                    </div>
+
+                    <div class="cloth-cut">
+                        <img src="images/men2.jpg" alt="men-cloth" class="cloth-pic8">
+                    </div>
+
+                    <div class="cloth-cut">
+                        <img src="images/men3.jpg" alt="men-cloth" class="cloth-pic9">
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="style-down">
+                <h5 id="tdown">Explicit fashion story only @ EliTe Fashion</h5>
+            </div>
+        </div>
+
+
+        <!-- Fourth Face -->
+        <div class="customer">
+            <div class="cus-group">
+                <div class="write-up">
+                    <h2 id="hwrite">Customer <br>Satisfaction!</h2>
+                    <p id="twrite">Excellent and good remark from customers who has worked with us
+                        and we have successfully delivered their jobs. Join the Fashion World today!.
+                    </p>
+
+                    <a href="contactElite.html">
+                        <input type="button" name="btn2" id="btn2" value="Get in torch">
+                    </a>
+                </div>
+
+                <div class="testimony">
+                    <div class="remark">
+                        <div class="talk-header">
+                            <hr id="line2">
+                            <h3 id="hremark">Silver Solomon</h3>
+                        </div>
+
+                        <p id="tremark">
+                            Splendid work by Elite fashion, was very satisfied by the design and color
+                            preview of the dress. It really made my day, keep up the good work!.
+                        </p>
+                        <div class="star-rating">
+                            <span class="star" data-rating="1">&#9733;</span>
+                            <span class="star" data-rating="2">&#9733;</span>
+                            <span class="star" data-rating="3">&#9733;</span>
+                            <span class="star" data-rating="4">&#9733;</span>
+                            <span class="star" data-rating="5" id="unselect">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <div class="remark">
+                        <div class="talk-header">
+                            <hr id="line2">
+                            <h3 id="hremark">Jennifer Kester</h3>
+                        </div>
+                        <p id="tremark">
+                            Splendid work by Elite fashion, was very satisfied by the design and color
+                            preview of the dress. It really made my day, keep up the good work!.
+                        </p>
+                        <div class="star-rating">
+                            <span class="star" data-rating="1">&#9733;</span>
+                            <span class="star" data-rating="2">&#9733;</span>
+                            <span class="star" data-rating="3">&#9733;</span>
+                            <span class="star" data-rating="4">&#9733;</span>
+                            <span class="star" data-rating="5" id="unselect">&#9733;</span>
+                        </div>
+                    </div>
+
+                    <div class="remark">
+                        <div class="talk-header">
+                            <hr id="line2">
+                            <h3 id="hremark">Bright Paul</h3>
+                        </div>
+                        <p id="tremark">
+                            Splendid work by Elite fashion, was very satisfied by the design and color
+                            preview of the dress. It really made my day, keep up the good work!.
+                        </p>
+                        <div class="star-rating">
+                            <span class="star" data-rating="1">&#9733;</span>
+                            <span class="star" data-rating="2">&#9733;</span>
+                            <span class="star" data-rating="3">&#9733;</span>
+                            <span class="star" data-rating="4">&#9733;</span>
+                            <span class="star" data-rating="5">&#9733;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="base">
+                <a href="#" id="foot" title="EliTe Fashion">Powered by EliTe Fashion @ 2025</a>
+            </div>
+
+            <div class="arrow-cover">
+                <a href="#start" class="auto-move">
+                    <i class="fa-solid fa-arrow-up" id="icon-auto"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>

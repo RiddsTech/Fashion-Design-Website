@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page of Elite Fashion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css">
+    <style>
+        :root {
+            --font-color1: rgb(104, 1, 1);
+            --font-color2: #fff;
+            --font-family: 'Times New Roman';
+            --font-family2: 'Calibri';
+            --color: #f0f0f0bb;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            max-width: 100%;
+            height: 100vh;
+        }
+
+        .contact {
+            background-image: url(images/contact-cover.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 650px;
+        }
+
+        .contact-view {
+            padding: 60px 50px 50px 50px;
+            background: rgba(128, 128, 128, 0.7);
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .group-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .main-contact {
+            height: 90%;
+            margin-right: 20px;
+            width: 40%;
+        }
+
+        .message {
+            height: 90%;
+            text-align: center;
+            width: 60%;
+        }
+
+        .meet {
+            margin: 60px 0;
+            text-align: center;
+        }
+
+        #call-link {
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .icon-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        #icon2 {
+            font-size: 60px;
+            color: var(--font-color2);
+        }
+
+        #call {
+            font-size: 30px;
+            font-family: 'Bahnschrift';
+            font-weight: normal;
+            color: var(--font-color2);
+        }
+
+        #call-text {
+            font-size: 20px;
+            font-family: 'Bahnschrift';
+            font-weight: normal;
+            color: var(--font-color2);
+        }
+
+        #htop {
+            font-size: 60px;
+            font-family: var(--font-family);
+            color: var(--font-color2);
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        #stop {
+            font-size: 20px;
+            font-family: var(--font-family);
+        }
+
+        form {
+            margin-top: 40px;
+        }
+
+        .group-info {
+            width: 90%;
+            gap: 10px;
+            margin: auto;
+        }
+
+        #name {
+            width: 50%;
+            padding: 12px;
+            background: #bbbbbbb9;
+            border: none;
+            outline: none;
+        }
+
+        ::placeholder {
+            color: var(--font-color2);
+        }
+
+        .base-me {
+            margin: auto;
+            width: 90%;
+        }
+
+        #me {
+            margin-top: 10px;
+            width: 100%;
+            height: 200px;
+            background: #bbbbbbb9;
+            border: none;
+            outline: none;
+            padding: 12px;
+            font-family: var(--font-family2);
+            font-size: 15px;
+        }
+
+        #btn7 {
+            padding: 15px 20px;
+            width: 100%;
+            margin-top: 5px;
+            border: none;
+            font-size: 16px;
+            background: var(--font-color1);
+            color: var(--font-color2);
+            cursor: pointer;
+            transition: .5s ease;
+        }
+
+        #btn7:hover {
+            transition: .5s ease-in-out;
+            background: #000;
+        }
+
+        footer {
+            background: var(--font-color1);
+            height: 250px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 100%;
+            text-align: center;
+            font-family: var(--font-family);
+        }
+
+        #logo-text {
+            font-size: 30px;
+            color: var(--font-color2);
+            cursor: pointer;
+        }
+
+        #part {
+            color: #000;
+            font-size: 25px;
+        }
+
+        #down-text {
+            font-size: 20px;
+            color: var(--font-color2);
+            font-family: var(--font-family);
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #menu-line {
+            border: 1px solid var(--font-color2);
+            width: 50%;
+            margin: auto;
+        }
+
+        .menu {
+            padding: 15px 20px;
+            border-radius: 20px;
+            text-align: center;
+            font-family: var(--font-family);
+        }
+
+        .navig {
+            text-decoration: none;
+            color: var(--font-color2);
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0 50px;
+            cursor: pointer;
+            transition: .8s ease;
+        }
+
+        #active {
+            text-decoration: underline;
+            color: var(--font-color2);
+            text-underline-offset: 5px;
+        }
+
+        .navig:hover, #active:hover {
+            transition: .8s ease-in-out;
+            text-decoration: underline;
+            text-underline-offset: 5px;
+        }
+
+        .base {
+            margin-top: 30px;
+            text-align: center
+        }
+
+        #foot {
+            text-decoration: none;
+            color: #000;
+        }
+
+        @media screen and (max-width: 960px) {
+            .contact-view {
+                padding: 40px 20px 20px 20px;
+            }
+
+            .main-contact {
+                width: 35%;
+            }
+
+            .message {
+                width: 65%;
+            }
+
+            #menu-line {
+                width: 70%;
+            }
+        }
+
+        @media screen and (max-width: 760px) {
+            .contact {
+                height: 1000px;
+            }
+
+            .contact-view {
+                display: table;
+                width: 100%
+            }
+
+            .message {
+                display: table-header-group;
+                height: 50%;
+                width: 100%;
+            }
+
+            .main-contact {
+                display: table-footer-group;
+                height: 50%;
+                width: 100%;
+                margin-right: 0;
+            }
+
+            #menu-line {
+                width: 100%;
+            }
+
+            footer {
+                padding: 20px;
+            }
+
+            .navig {
+                margin: 0 20px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+
+            .group-info,
+            .base-me {
+                width: 100%;
+            }
+
+            .contact {
+                height: 1100px;
+            }
+
+        }
+
+        @media screen and (max-width: 420px) {
+            .contact-view {
+                padding: 30px 10px 10px 10px;
+            }
+
+            .group-info {
+                display: block;
+                margin-top: -10px;
+            }
+
+            #name {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            #htop {
+                font-size: 50px;
+            }
+
+            .meet {
+                margin: 30px 0;
+            }
+
+            #down-text {
+                font-size: 17px;
+            }
+
+            .navig {
+                font-size: 16px;
+                margin: 0 5px;
+            }
+
+            footer {
+                padding: 20px 10px 10px 10px;
+                height: 260px;
+            }
+
+            #foot {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="contact">
+            <div class="contact-view">
+                <div class="main-contact">
+                    <div class="meet">
+                        <a href="+2348073415395" id="call-link">
+                            <div class="icon-box">
+                                <i class="fa-solid fa-phone" id="icon2"></i>
+                            </div>
+
+                            <h3 id="call">+234 807 341 5395</h3>
+                            <h4 id="call-text">Service Line</h4>
+                        </a>
+                    </div>
+
+                    <div class="meet">
+                        <div class="icon-box">
+                            <i class="fa-solid fa-location-dot" id="icon2"></i>
+                        </div>
+
+                        <h3 id="call">MAIN ADDRESS</h3>
+                        <h4 id="call-text">45, Cresent Avenue, Old Road, Ikpoba-hill, <br>Benin City, Edo State.</h4>
+                    </div>
+                </div>
+
+                <div class="message">
+                    <div class="top-box">
+                        <h2 id="htop">Stay In Torch</h2>
+                        <p id="stop">
+                            Send us a message or make an inquiry based on the service you want.<br>
+                            Also contact us for questions and/or customer complaint.
+                        </p>
+                    </div>
+
+                    <form>
+                        <div class="group-info">
+                            <input type="text" name="person" id="name" placeholder="Name" required>
+                            <input type="email" name="email" id="name" placeholder="Email Address" required>
+                        </div>
+
+                        <div class="base-me">
+                            <textarea name="text" id="me" rows="10" cols="6" placeholder="Type message..."
+                                required></textarea>
+                            <input type="submit" name="btn7" id="btn7" value="Send message">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+        <footer>
+            <div class="logo">
+                <h3 id="logo-text">EliTe<span id="part">fashion</span></h3>
+            </div>
+            <h5 id="down-text">Different clothing styles for all genders and occassions</h5>
+
+            <div class="menu">
+                <a href="aboutElite.html" class="navig">About</a>
+                <a href="serviceElite.html" class="navig">Services</a>
+                <a href="contactElite.html" class="navig" id="active">Contact</a>
+            </div>
+            <hr id="menu-line">
+
+            <div class="base">
+                <a href="#" id="foot" title="EliTe Fashion">© All Rights Reserved by EliTe Fashion @ 2025</a>
+            </div>
+        </footer>
+    </section>
+</body>
+
+</html>
